@@ -1,0 +1,45 @@
+---
+title: "文件系统概述"
+---
+
+# 文件系统
+<subtitle>在隔离的沙箱环境中管理文件与目录，支持各种读写及同步操作。</subtitle>
+
+## 配置环境
+
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
+
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的秘钥。
+
+```bash
+export AGENTBOX_API_KEY=your_api_key
+```
+
+每个 UAgentBox 沙箱都拥有独立的、隔离的文件系统，专为 Agent 的临时计算任务设计。通过文件系统 API，您可以高效地管理输入数据、输出结果以及任务中间文件。
+
+## 核心功能
+
+通过 SDK，您可以实现以下操作：
+
+*   **[读写文件](docs/sdk/filesystem/02-read-and-write.md)**：直接写入文本或字节数据，读取文件内容。
+*   **[元数据查看](docs/sdk/filesystem/03-file-and-directory-metadata.md)**：检索文件大小、权限及修改时间。
+*   **[目录监控](docs/sdk/filesystem/04-watch-directory-for-changes.md)**：实时监听目录下产生的任何文件变更（类似 `inotify`）。
+*   **[数据上传](docs/sdk/filesystem/05-upload-data.md)**：将本地文件或二进制流批量传输至沙箱。
+*   **[数据下载](docs/sdk/filesystem/06-download-data.md)**：从沙箱中回传生成的结果文件。
+
+## 快速入口
+
+```python
+from ucloud_sandbox import Sandbox
+
+sandbox = Sandbox.create()
+
+# 快速写入并验证
+sandbox.files.write("hello.txt", "UAgentBox is awesome!")
+content = sandbox.files.read("hello.txt")
+print(content) # 输出: UAgentBox is awesome!
+```
+
+---
+
+?> **默认根目录**：绝大部分操作默认在 `/home/user` 下进行。对于自定义模板，请确保您的 Agent 对目标路径拥有足够的读写权限。
