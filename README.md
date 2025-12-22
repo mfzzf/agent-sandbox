@@ -4,7 +4,7 @@ UCloud Sandbox 为您提供安全可靠的弹性沙箱计算服务。只需几�
 
 随着业务需求的变化，您可以实时扩展或缩减计算资源。UCloud Sandbox 支持按实际使用的资源计费，可以为您节约计算成本。使用 UCloud Sandbox 可以极大降低您的基础设施维护成本，简化 Agent 本地环境隔离的复杂性。
 
-#### <center>[CLI 指南](/agent-sandbox/docs/cli/cli.md)   |   [SDK 入门](/agent-sandbox/docs/sdk/template/01-quick-start.md)   |   [沙箱管理](/agent-sandbox/docs/sdk/sandbox/01-lifecycle.md)   |   [词汇表](/agent-sandbox/_glossary.md)</center>
+#### <center>[快速开始](/agent-sandbox/docs/sdk/00-quick-start.md)   |   [E2B 兼容](/agent-sandbox/docs/sdk/e2b-compatibility.md)   |   [CLI 指南](/agent-sandbox/docs/cli/cli.md)   |   [词汇表](/agent-sandbox/_glossary.md)</center>
 
 ## 1. 了解 UCloud Sandbox
 
@@ -18,8 +18,9 @@ UCloud Sandbox 为您提供安全可靠的弹性沙箱计算服务。只需几�
 
 只需几步即可开始使用 UCloud Sandbox。
 
+* [SDK 快速开始](/agent-sandbox/docs/sdk/00-quick-start.md)
+* [E2B 兼容模式](/agent-sandbox/docs/sdk/e2b-compatibility.md)
 * [安装 CLI](/agent-sandbox/docs/cli/cli.md#安装)
-* [创建第一个沙箱](/agent-sandbox/docs/sdk/sandbox/01-lifecycle.md)
 * [构建自定义模板](/agent-sandbox/docs/sdk/template/01-quick-start.md)
 
 ## 3. 核心功能

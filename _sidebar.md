@@ -2,6 +2,8 @@
 
 * [概览](/agent-sandbox/README.md)
 * SDK 指南
+    * [快速开始](/agent-sandbox/docs/sdk/00-quick-start.md)
+    * [E2B 兼容](/agent-sandbox/docs/sdk/e2b-compatibility.md)
     * 沙箱管理
         * [生命周期](/agent-sandbox/docs/sdk/sandbox/01-lifecycle.md)
         * [数据持久化](/agent-sandbox/docs/sdk/sandbox/04-persistence.md)
