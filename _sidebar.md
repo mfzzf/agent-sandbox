@@ -11,7 +11,7 @@
         * [元数据管理](/agent-sandbox/docs/sdk/sandbox/06-metadata.md)
         * [环境变量](/agent-sandbox/docs/sdk/sandbox/07-environment-variables.md)
         * [列表查询](/agent-sandbox/docs/sdk/sandbox/08-list.md)
-        * [手动连接沙箱](/agent-sandbox/docs/sdk/sandbox/09-connect-to-running-sanbox.md)
+        * [手动连接沙箱](/agent-sandbox/docs/sdk/sandbox/09-connect-to-running-sandbox.md)
         * [网络/互联网访问](/agent-sandbox/docs/sdk/sandbox/10-internet-access.md)
         * [连接存储桶](/agent-sandbox/docs/sdk/sandbox/11-connect-bucket.md)
         * [频率限制](/agent-sandbox/docs/sdk/sandbox/12-rate-limit.md)

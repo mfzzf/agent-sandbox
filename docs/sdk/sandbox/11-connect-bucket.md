@@ -7,7 +7,7 @@
 
 在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的秘钥。
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key

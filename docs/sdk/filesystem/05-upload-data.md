@@ -1,12 +1,13 @@
 # 上传数据到沙箱
+<subtitle>将本地文件或数据流上传到沙箱文件系统。</subtitle>
 
-你可以使用 `files.write()` 方法将数据上传到沙箱。
+您可以使用 `files.write()` 方法将数据上传到沙箱。
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key
@@ -27,9 +28,9 @@ with open("path/to/local/file", "rb") as file:
 
 ## 使用预签名 URL 上传
 
-有时，你可能希望允许未经授权环境（如浏览器）中的用户将文件上传到沙箱。针对此用例，你可以使用预签名 URL 让用户安全地上传文件。
+有时，您可能希望允许未经授权环境（如浏览器）中的用户将文件上传到沙箱。针对此用例，您可以使用预签名 URL 让用户安全地上传文件。
 
-你所需要做的就是使用 `secure=True` 选项创建一个沙箱。随后将生成一个上传 URL，该 URL 带有签名，仅允许授权用户上传文件。你可以选择为 URL 设置过期时间，使其仅在有限时间内有效。
+您所需要做的就是使用 `secure=True` 选项创建一个沙箱。随后将生成一个上传 URL，该 URL 带有签名，仅允许授权用户上传文件。您可以选择为 URL 设置过期时间，使其仅在有限时间内有效。
 
 ```python
 import requests

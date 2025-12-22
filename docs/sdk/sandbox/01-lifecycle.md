@@ -5,7 +5,7 @@
 
 在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的秘钥。
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key
@@ -15,7 +15,7 @@ export AGENTBOX_API_KEY=your_api_key
 
 启动沙箱时，默认存活时间（timeout）为 5 分钟（300 秒）。您可以根据需求自定义此参数。
 
-!> 注意：超出的沙箱将由系统自动回收并清理。
+!> 注意：超时的沙箱将由系统自动回收并清理。
 
 ```python
 from ucloud_sandbox import Sandbox
@@ -51,7 +51,7 @@ from ucloud_sandbox import Sandbox
 
 sandbox = Sandbox.create(timeout=60)
 
-# 获取沙箱相信信息
+# 获取沙箱详细信息
 info = sandbox.get_info()
 
 print(info)

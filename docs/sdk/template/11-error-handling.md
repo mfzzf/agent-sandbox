@@ -1,12 +1,12 @@
 # 错误处理
 
-> 处理模板中的错误
+<subtitle>捕获并处理模板构建过程中的各类异常。</subtitle>
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key

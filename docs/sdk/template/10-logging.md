@@ -1,12 +1,12 @@
 # 日志记录
 
-> 如何查看模板构建的日志
+<subtitle>实时获取模板构建日志并自定义日志处理逻辑。</subtitle>
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key

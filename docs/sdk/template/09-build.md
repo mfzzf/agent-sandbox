@@ -1,12 +1,12 @@
 # 构建
 
-> 如何构建模板
+<subtitle>执行模板构建并监控构建进度与状态。</subtitle>
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key

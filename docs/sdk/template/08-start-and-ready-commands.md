@@ -1,12 +1,12 @@
 # 启动和就绪命令
 
-> 定义沙盒运行的进程
+<subtitle>定义沙箱启动时自动运行的服务及就绪检查。</subtitle>
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key
@@ -14,22 +14,22 @@ export AGENTBOX_API_KEY=your_api_key
 
 ## 启动命令
 
-启动命令允许您指定在生成自定义沙盒时**已经在运行**的命令。
-这样，例如，您可以在沙盒内运行服务器或预置数据库，当您使用 SDK 生成沙盒时，它们已经完全准备就绪，用户在运行时零等待时间。
+启动命令允许您指定在生成自定义沙箱时**已经在运行**的命令。
+例如，您可以在沙箱内运行服务器或预置数据库，当您使用 SDK 生成沙箱时，它们已经完全准备就绪，用户在运行时零等待时间。
 
-启动命令功能的目的是为了减少用户的等待时间，并在您生成沙盒时为用户准备好一切。
+启动命令功能的目的是为了减少用户的等待时间，并在您生成沙箱时为用户准备好一切。
 
-您可以在[此处](/agent-sandbox/02-how-it-works.md)查看其工作原理。
+您可以在[此处](/agent-sandbox/docs/sdk/template/02-how-it-works.md)查看其工作原理。
 
 ## 就绪命令
 
-就绪命令允许您指定一个命令，该命令将在创建[快照](/agent-sandbox/02-how-it-works.md)之前确定**模板沙盒**的就绪状态。
+就绪命令允许您指定一个命令，该命令将在创建[快照](/agent-sandbox/docs/sdk/template/02-how-it-works.md)之前确定**模板沙箱**的就绪状态。
 它在一个无限循环中执行，直到返回成功的**退出代码 0**。
 通过这种方式，您可以控制我们应该等待[启动命令](#启动命令)或任何系统状态多长时间。
 
 ## 用法
 
-设置沙盒启动时运行的命令以及确定沙盒何时就绪的命令：
+设置沙箱启动时运行的命令以及确定沙箱何时就绪的命令：
 
 ```python
 from ucloud_sandbox import Template, wait_for_port, wait_for_timeout
@@ -43,7 +43,7 @@ template.set_start_cmd("npm start", wait_for_port(3000))
 template.set_ready_cmd(wait_for_timeout(10_000))
 ```
 
-就绪命令用于确定沙盒何时准备好接受连接。
+就绪命令用于确定沙箱何时准备好接受连接。
 
 > 您每个模板只能调用这些命令一次。后续调用将抛出错误。
 

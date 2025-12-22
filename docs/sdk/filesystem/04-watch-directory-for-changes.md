@@ -1,12 +1,13 @@
 # 监视沙箱目录的更改
+<subtitle>实时监听沙箱内目录的文件变更事件。</subtitle>
 
-你可以使用 `files.watch_dir()` 方法来监视目录的更改。
+您可以使用 `files.watch_dir()` 方法来监视目录的更改。
 
-### 配置参数
+## 配置环境
 
-在使用 SDK 之前，请确保配置以下环境变量：
+在使用 SDK 之前，请确保已配置 `AGENTBOX_API_KEY` 环境变量。
 
-- 获取 API Key: [https://console.ucloud.cn/modelverse/experience/api-keys](https://console.ucloud.cn/modelverse/experience/api-keys)
+?> 您可以在 [控制台 API 密钥页面](https://console.ucloud.cn/modelverse/experience/api-keys) 获取您的密钥。
 
 ```bash
 export AGENTBOX_API_KEY=your_api_key
@@ -38,7 +39,7 @@ for event in events:
 
 ## 递归监视
 
-你可以通过 `recursive` 参数启用递归监视。
+您可以通过 `recursive` 参数启用递归监视。
 
 > **提示**
 >
