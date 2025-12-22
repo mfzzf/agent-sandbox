@@ -1,7 +1,3 @@
----
-title: "列表查询"
----
-
 # 列表查询
 <subtitle>检索并筛选当前处于运行或暂停状态的沙箱实例。</subtitle>
 
@@ -103,6 +99,6 @@ print(f"Total active sandboxes: {len(all_sandboxes)}")
 ## 下一步操作
 
 获取到沙箱 ID 后，您可以：
-- 调用 `Sandbox.connect(id)` [重新连接沙箱](docs/sdk/sandbox/09-connect-to-running-sanbox.md)。
+- 调用 `Sandbox.connect(id)` [重新连接沙箱](/agent-sandbox/docs/sdk/sandbox/09-connect-to-running-sanbox.md)。
 - 调用 `Sandbox.kill(id)` 强制关停。
 - 检索其运行指标。

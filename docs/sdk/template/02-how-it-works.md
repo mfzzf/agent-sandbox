@@ -1,7 +1,3 @@
----
-title: "工作原理"
----
-
 # 模板工作原理
 <subtitle>深入了解 UCloud Sandbox 如何通过快照技术实现毫秒级的沙箱启动与环境还原。</subtitle>
 
@@ -23,8 +19,8 @@ export AGENTBOX_API_KEY=your_api_key
 
 1.  **环境初始化**：基于指定的镜像启动容器，并挂载文件系统。
 2.  **依赖安装**：执行您定义的 `apt_install`、`pip_install` 或 `run_cmd` 指令。
-3.  **服务启动**（可选）：执行您配置的 [启动命令](docs/sdk/template/08-start-and-ready-commands.md)。
-4.  **就绪检查**：执行 [就绪命令](docs/sdk/template/08-start-and-ready-commands.md) 确认环境已完全可用。
+3.  **服务启动**（可选）：执行您配置的 [启动命令](/agent-sandbox/docs/sdk/template/08-start-and-ready-commands.md)。
+4.  **就绪检查**：执行 [就绪命令](/agent-sandbox/docs/sdk/template/08-start-and-ready-commands.md) 确认环境已完全可用。
 5.  **快照持久化**：将整个沙箱的文件系统及**内存状态（运行中的进程）**一并序列化并保存。
 
 我们将这个最终生成的持久化状态称为 **沙箱模板**。
@@ -48,4 +44,4 @@ export AGENTBOX_API_KEY=your_api_key
 !> **内核绑定说明**：内核版本在**模板构建瞬间**即被固定。如果基础镜像库更新了内核，且您希望应用这些更新，您必须**重新构建模板**。旧模板产生的沙箱无法直接在线升级内核。
 
 ### 用户与目录
-关于沙箱内的默认权限与工作目录，请参阅 [用户与工作目录](docs/sdk/template/03-user-and-work-dir.md)。
+关于沙箱内的默认权限与工作目录，请参阅 [用户与工作目录](/agent-sandbox/docs/sdk/template/03-user-and-work-dir.md)。

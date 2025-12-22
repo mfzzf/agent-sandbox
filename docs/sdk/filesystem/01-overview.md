@@ -1,7 +1,3 @@
----
-title: "文件系统概述"
----
-
 # 文件系统
 <subtitle>在隔离的沙箱环境中管理文件与目录，支持各种读写及同步操作。</subtitle>
 
@@ -21,11 +17,11 @@ export AGENTBOX_API_KEY=your_api_key
 
 通过 SDK，您可以实现以下操作：
 
-*   **[读写文件](docs/sdk/filesystem/02-read-and-write.md)**：直接写入文本或字节数据，读取文件内容。
-*   **[元数据查看](docs/sdk/filesystem/03-file-and-directory-metadata.md)**：检索文件大小、权限及修改时间。
-*   **[目录监控](docs/sdk/filesystem/04-watch-directory-for-changes.md)**：实时监听目录下产生的任何文件变更（类似 `inotify`）。
-*   **[数据上传](docs/sdk/filesystem/05-upload-data.md)**：将本地文件或二进制流批量传输至沙箱。
-*   **[数据下载](docs/sdk/filesystem/06-download-data.md)**：从沙箱中回传生成的结果文件。
+*   **[读写文件](/agent-sandbox/docs/sdk/filesystem/02-read-and-write.md)**：直接写入文本或字节数据，读取文件内容。
+*   **[元数据查看](/agent-sandbox/docs/sdk/filesystem/03-file-and-directory-metadata.md)**：检索文件大小、权限及修改时间。
+*   **[目录监控](/agent-sandbox/docs/sdk/filesystem/04-watch-directory-for-changes.md)**：实时监听目录下产生的任何文件变更（类似 `inotify`）。
+*   **[数据上传](/agent-sandbox/docs/sdk/filesystem/05-upload-data.md)**：将本地文件或二进制流批量传输至沙箱。
+*   **[数据下载](/agent-sandbox/docs/sdk/filesystem/06-download-data.md)**：从沙箱中回传生成的结果文件。
 
 ## 快速入口
 

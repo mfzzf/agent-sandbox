@@ -1,7 +1,3 @@
----
-title: "元数据管理"
----
-
 # 元数据管理
 <subtitle>为沙箱附加自定义标签，便于进行多维度筛选与会话关联。</subtitle>
 
@@ -50,4 +46,4 @@ for sbx in running_sandboxes:
 
 ## 按元数据过滤
 
-配合 `Sandbox.list()` 方法，您可以高效地按标签找回所需的沙箱实例。详情请参考 [列表查询](docs/sdk/sandbox/08-list.md)。
+配合 `Sandbox.list()` 方法，您可以高效地按标签找回所需的沙箱实例。详情请参考 [列表查询](/agent-sandbox/docs/sdk/sandbox/08-list.md)。

@@ -1,7 +1,3 @@
----
-title: "UCloud Sandbox CLI"
----
-
 # UCloud Sandbox CLI
 <subtitle>强大的命令行工具，用于本地管理沙箱生命周期、构建模板及执行运维任务。</subtitle>
 

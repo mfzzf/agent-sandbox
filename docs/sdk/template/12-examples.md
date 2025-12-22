@@ -1,7 +1,3 @@
----
-title: "典型示例库"
----
-
 # 典型示例库
 <subtitle>涵盖从基础 Web 应用、多 runtime 环境到图形化桌面的沙箱构建方案。</subtitle>
 
