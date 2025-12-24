@@ -28,7 +28,7 @@ export AGENTBOX_API_KEY=your_api_key
 from ucloud_sandbox import Sandbox
 
 sandbox = Sandbox.create()
-result = sandbox.commands.run("echo $AGENTBOX_SANDBOX_ID")
+result = sandbox.commands.run("echo $E2B_SANDBOX_ID")
 print(f"Current Sandbox ID: {result.stdout}")
 ```
 
@@ -53,6 +53,12 @@ sandbox = Sandbox.create(
         'APP_MODE': 'production'
     },
 )
+
+res = sandbox.commands.run("echo $BASE_URL")
+print(res.stdout)
+
+res = sandbox.commands.run("echo $APP_MODE")
+print(res.stdout)
 ```
 
 ### 2. 执行代码时临时注入
@@ -61,10 +67,15 @@ sandbox = Sandbox.create(
 
 ```python
 # 仅对本次 Python 代码执行生效
-sandbox.run_code(
+from ucloud_sandbox.code_interpreter import Sandbox
+
+sandbox = Sandbox.create()
+
+res = sandbox.run_code(
     'import os; print(os.environ.get("TEMP_KEY"))',
     envs={'TEMP_KEY': 'temporary_value'}
 )
+print(res.logs.stdout)
 ```
 
 ### 3. 执行命令时临时注入
@@ -73,10 +84,15 @@ sandbox.run_code(
 
 ```python
 # 仅对本次 Shell 命令执行生效
-sandbox.commands.run(
+from ucloud_sandbox.code_interpreter import Sandbox
+
+sandbox = Sandbox.create()
+
+res = sandbox.commands.run(
     'echo $DEBUG_LEVEL',
     envs={'DEBUG_LEVEL': 'verbose'}
 )
+print(res)
 ```
 
 ## 覆盖优先规则

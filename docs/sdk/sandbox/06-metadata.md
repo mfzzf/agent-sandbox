@@ -35,7 +35,8 @@ sandbox = Sandbox.create(
 )
 
 # 2. 访问当前沙箱的元数据
-print(sandbox.metadata)  # {'userId': 'user_1a2b3c', 'taskType': 'data-analysis'}
+print(sandbox.get_info())
+
 
 # 3. 通过列表接口访问元数据
 running_sandboxes = Sandbox.list().next_items()

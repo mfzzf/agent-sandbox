@@ -58,7 +58,7 @@ if __name__ == '__main__':
         template,
         alias="my-agent-env",
         cpu_count=2,
-        memory_mb=1024,
+        memory_mb=2048,
         on_build_logs=default_build_logger(),
     )
 ```

@@ -20,7 +20,6 @@
         * [环境变量](/agent-sandbox/docs/sdk/sandbox/07-environment-variables.md)
         * [数据持久化](/agent-sandbox/docs/sdk/sandbox/04-persistence.md)
         * [网络访问](/agent-sandbox/docs/sdk/sandbox/10-internet-access.md)
-        * [连接存储桶](/agent-sandbox/docs/sdk/sandbox/11-connect-bucket.md)
         * [指标监控](/agent-sandbox/docs/sdk/sandbox/05-metrics.md)
         * [频率限制](/agent-sandbox/docs/sdk/sandbox/12-rate-limit.md)
     * 命令执行
@@ -44,7 +43,6 @@
     * [启动与就绪命令](/agent-sandbox/docs/sdk/template/08-start-and-ready-commands.md)
     * [构建模板](/agent-sandbox/docs/sdk/template/09-build.md)
     * [构建日志](/agent-sandbox/docs/sdk/template/10-logging.md)
-    * [错误处理](/agent-sandbox/docs/sdk/template/11-error-handling.md)
     * [示例库](/agent-sandbox/docs/sdk/template/12-examples.md)
 * 排障与参考
     * [常见问题与排障](/agent-sandbox/docs/troubleshooting/00-overview.md)

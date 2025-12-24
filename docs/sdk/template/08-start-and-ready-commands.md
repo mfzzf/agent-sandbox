@@ -30,7 +30,7 @@
 ```python
 from ucloud_sandbox import Template, wait_for_port, wait_for_timeout
 
-template = Template()
+template = Template().from_base_image()
 
 # 同时设置启动命令和就绪命令
 template.set_start_cmd("npm start", wait_for_port(3000))

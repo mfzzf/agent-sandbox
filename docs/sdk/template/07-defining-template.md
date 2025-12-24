@@ -28,7 +28,7 @@ template = (
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 设置工作目录
 template.set_workdir("/app")
@@ -45,7 +45,7 @@ template.set_user("1000:1000")  # 用户 ID 和组 ID
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 复制单个文件
 template.copy("package.json", "/app/package.json")
@@ -70,7 +70,7 @@ template.copy("config.json", "/app/config.json", user="appuser", mode=0o644)
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 删除文件或目录
 template.remove("/tmp/old-file")
@@ -96,7 +96,7 @@ template.make_symlink("/path/to/target", "/path/to/link")
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 安装 Python 包
 template.pip_install(["requests", "pandas", "numpy"])
@@ -127,7 +127,7 @@ template.apt_install(["curl", "wget", "git"])
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 克隆仓库
 template.git_clone("https://github.com/user/repo.git")
@@ -149,7 +149,7 @@ template.git_clone("https://github.com/user/repo.git", "/app/repo", depth=1)
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 template.set_envs({
     "NODE_ENV": "production",
@@ -165,7 +165,7 @@ template.set_envs({
 ```python
 from ucloud_sandbox import Template
 
-template = Template()
+template = Template().from_base_image()
 
 # 运行单个命令
 template.run_cmd("apt-get update && apt-get install -y curl")

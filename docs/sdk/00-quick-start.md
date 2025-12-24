@@ -82,19 +82,19 @@ sandbox.kill()
 ### 使用 Python SDK
 
 ```python
-from ucloud_sandbox import Sandbox
+from ucloud_sandbox.code_interpreter import Sandbox
 
 # 使用代码解释器模板
 sandbox = Sandbox.create(template="code-interpreter-v1")
 
 # 执行 Python 数据分析
-result = sandbox.commands.run("""
+result = sandbox.run_code("""
 import pandas as pd
 data = {'name': ['Alice', 'Bob'], 'age': [25, 30]}
 df = pd.DataFrame(data)
 print(df)
 """)
-print(result.stdout)
+print(result)
 
 sandbox.kill()
 ```
@@ -215,7 +215,7 @@ Template.build(
     template,
     alias="my-agent-env",
     cpu_count=2,
-    memory_mb=1024,
+    memory_mb=2048,
     on_build_logs=default_build_logger(),
 )
 ```

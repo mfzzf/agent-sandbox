@@ -63,9 +63,6 @@ ucloud-sandbox-cli sandbox create desktop
 
 # 基础环境 - 轻量级 Linux 环境
 ucloud-sandbox-cli sandbox create base
-
-# 不指定模板则使用默认基础环境
-ucloud-sandbox-cli sandbox create
 ```
 
 > [!TIP]

@@ -85,8 +85,8 @@ token = sandbox.traffic_access_token
 # 发起带有身份验证头的请求
 response = requests.get(
     f"https://{sandbox.get_host(8080)}",
-    headers={'agentbox-traffic-access-token': token}
 )
+print(response) # 403
 ```
 
 ### 自定义请求 Host 头部
