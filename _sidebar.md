@@ -11,6 +11,8 @@
     * [产品架构](/agent-sandbox/docs/product/03-architecture.md)
     * [模板工作原理](/agent-sandbox/docs/sdk/template/02-how-it-works.md)
 * SDK 指南
+    * [Code Interpreter](/agent-sandbox/docs/sdk/sandbox/13-code-interpreter.md)
+    * [Desktop](/agent-sandbox/docs/sdk/sandbox/14-desktop.md)
     * 沙箱管理
         * [生命周期](/agent-sandbox/docs/sdk/sandbox/01-lifecycle.md)
         * [列表查询](/agent-sandbox/docs/sdk/sandbox/08-list.md)
@@ -22,8 +24,6 @@
         * [连接存储桶](/agent-sandbox/docs/sdk/sandbox/11-connect-bucket.md)
         * [指标监控](/agent-sandbox/docs/sdk/sandbox/05-metrics.md)
         * [频率限制](/agent-sandbox/docs/sdk/sandbox/12-rate-limit.md)
-        * [Code Interpreter](/agent-sandbox/docs/sdk/sandbox/13-code-interpreter.md)
-        * [Desktop Sandbox](/agent-sandbox/docs/sdk/sandbox/14-desktop.md)
     * 命令执行
         * [概述](/agent-sandbox/docs/sdk/commands/01-overview.md)
         * [流式输出](/agent-sandbox/docs/sdk/commands/02-streaming.md)

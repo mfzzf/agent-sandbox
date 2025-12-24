@@ -43,6 +43,42 @@ ucloud-sandbox-cli auth logout
 
 ## 沙箱运行管理
 
+### 创建与连接
+快速创建沙箱并进入交互式终端。
+
+```bash
+# 使用内置模板创建沙箱
+ucloud-sandbox-cli sandbox create [template]
+# 简写：ucloud-sandbox-cli sbx cr [template]
+```
+
+**内置模板**：
+
+```bash
+# 代码解释器 - 预装 Python 和数据科学库
+ucloud-sandbox-cli sandbox create code-interpreter-v1
+
+# 桌面环境 - 支持图形化应用和浏览器
+ucloud-sandbox-cli sandbox create desktop
+
+# 基础环境 - 轻量级 Linux 环境
+ucloud-sandbox-cli sandbox create base
+
+# 不指定模板则使用默认基础环境
+ucloud-sandbox-cli sandbox create
+```
+
+> [!TIP]
+> 创建成功后,CLI 会自动连接终端,您可以像操作本地 Shell 一样执行命令。按 `Ctrl+D` 或输入 `exit` 退出连接(沙箱继续运行)。
+
+### 连接现有沙箱
+重新连接到已运行的沙箱实例。
+
+```bash
+ucloud-sandbox-cli sandbox connect <sandbox-id>
+# 简写：ucloud-sandbox-cli sbx cn <sandbox-id>
+```
+
 ### 列表查询
 查看名下所有活跃（运行或暂停）的沙箱实例。
 

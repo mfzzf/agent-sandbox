@@ -69,7 +69,55 @@ sandbox.kill()
 
 ---
 
-## 5. 执行命令
+## 5. 使用内置模板
+
+为方便快速开发,我们提供了三个预置模板,开箱即用:
+
+| 模板名称 | 说明 | 适用场景 |
+|---------|------|----------|
+| `base` | 基础 Linux 环境, 包含常用命令行工具 | 通用场景、Shell 脚本执行 |
+| `code-interpreter-v1` | Python 环境,预装数据科学常用库 (numpy, pandas, matplotlib 等) | 代码解释器、数据分析、AI Agent |
+| `desktop` | 完整桌面环境,支持图形化应用 | 浏览器自动化、UI 测试、可视化应用 |
+
+### 使用 Python SDK
+
+```python
+from ucloud_sandbox import Sandbox
+
+# 使用代码解释器模板
+sandbox = Sandbox.create(template="code-interpreter-v1")
+
+# 执行 Python 数据分析
+result = sandbox.commands.run("""
+import pandas as pd
+data = {'name': ['Alice', 'Bob'], 'age': [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+""")
+print(result.stdout)
+
+sandbox.kill()
+```
+
+### 使用 CLI
+
+```bash
+# 创建并连接到代码解释器沙箱
+ucloud-sandbox-cli sandbox create code-interpreter-v1
+
+# 创建桌面环境沙箱
+ucloud-sandbox-cli sandbox create desktop
+
+# 创建基础环境沙箱
+ucloud-sandbox-cli sandbox create base
+```
+
+> [!TIP]
+> CLI 的 `sandbox create` 命令会自动打开交互式终端并连接到沙箱,非常适合调试和开发。
+
+---
+
+## 6. 执行命令
 
 `commands.run()` 是与沙箱交互最直接的方式。您可以像操作本地终端一样执行任意合法命令：
 
@@ -95,7 +143,7 @@ sandbox.kill()
 
 ---
 
-## 6. 文件操作
+## 7. 文件操作
 
 每个沙箱都拥有独立的文件系统，您可以轻松进行读写操作：
 
@@ -126,7 +174,7 @@ sandbox.kill()
 
 ---
 
-## 7. 构建自定义模板
+## 8. 构建自定义模板
 
 模板（Template）是沙箱的蓝图，允许您预装软件、配置环境变量、预置文件。
 
@@ -190,7 +238,7 @@ print(f"Version: {result.stdout}")  # 输出: Version: 1.0.0
 
 ---
 
-## 8. 完整示例
+## 9. 完整示例
 
 以下是一个完整的工作流程示例：
 

@@ -40,7 +40,7 @@ for result in execution.results:
     if result.png:
         print(f"Generated PNG image of {len(result.png)} bytes")
 
-sandbox.close()
+sandbox.kill()
 ```
 
 ## 主要功能

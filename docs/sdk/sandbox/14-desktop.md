@@ -32,7 +32,7 @@ desktop.write("Hello Desktop!") # 输入文本
 desktop.stream.start()
 print(f"VNC URL: {desktop.stream.get_url()}")
 
-desktop.close()
+desktop.kill()
 ```
 
 ## 主要功能
