@@ -76,6 +76,7 @@ sandbox.kill()
 | `base` | 基础 Linux 环境, 包含常用命令行工具 | 通用场景、Shell 脚本执行 |
 | `code-interpreter-v1` | Python 环境,预装数据科学常用库 (numpy, pandas, matplotlib 等) | 代码解释器、数据分析、AI Agent |
 | `desktop` | 完整桌面环境,支持图形化应用 | 浏览器自动化、UI 测试、可视化应用 |
+| `claude-code` | 预置 Claude Code 环境 | AI 辅助编程、智能终端交互 |
 
 ### 使用 Python SDK
 
@@ -105,6 +106,9 @@ ucloud-sandbox-cli sandbox create code-interpreter-v1
 
 # 创建桌面环境沙箱
 ucloud-sandbox-cli sandbox create desktop
+
+# 创建 Claude Code 环境沙箱
+ucloud-sandbox-cli sandbox create claude-code
 
 # 创建基础环境沙箱
 ucloud-sandbox-cli sandbox create base

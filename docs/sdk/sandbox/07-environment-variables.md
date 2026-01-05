@@ -17,10 +17,10 @@ export AGENTBOX_API_KEY=your_api_key
 
 当沙箱启动后，系统会自动注入以下变量，供程序识别当前的运行环境：
 
-*   `AGENTBOX_SANDBOX`: 始终为 `true`，用于代码自检当前是否运行于沙箱内。
-*   `AGENTBOX_SANDBOX_ID`: 当前沙箱的唯一标识符。
-*   `AGENTBOX_TEAM_ID`: 所属团队 ID。
-*   `AGENTBOX_TEMPLATE_ID`: 启动该沙箱所使用的模板 ID。
+*   `UCLOUD_SANDBOX`: 始终为 `true`，用于代码自检当前是否运行于沙箱内。
+*   `UCLOUD_SANDBOX_ID`: 当前沙箱的唯一标识符。
+*   `UCLOUD_TEAM_ID`: 所属团队 ID。
+*   `UCLOUD_TEMPLATE_ID`: 启动该沙箱所使用的模板 ID。
 
 **通过 SDK 验证：**
 
@@ -28,11 +28,11 @@ export AGENTBOX_API_KEY=your_api_key
 from ucloud_sandbox import Sandbox
 
 sandbox = Sandbox.create()
-result = sandbox.commands.run("echo $E2B_SANDBOX_ID")
+result = sandbox.commands.run("echo $UCLOUD_SANDBOX_ID")
 print(f"Current Sandbox ID: {result.stdout}")
 ```
 
-?> **CLI 访问路径**：如果您通过 CLI 手动进入沙箱，可以通过检查 `/run/agentbox/` 目录下的点文件来读取这些变量。
+?> **CLI 访问路径**：如果您通过 CLI 手动进入沙箱，可以通过检查 `/run/ucloud/` 目录下的点文件来读取这些变量。
 
 ---
 

@@ -161,35 +161,7 @@ sandbox = Sandbox.create(
 
 ## 限流与资源限制
 
-### 现象
-- 请求被拒绝，返回 429 错误
-- SDK 抛出 `RateLimitException`
-
-### 限流阈值
-
-| 类型 | 阈值 |
-|-----|------|
-| 管理 API（创建/关停/列表） | 20,000 次 / 30 秒 |
-| 沙箱内操作（命令/文件） | 40,000 次 / 60 秒 |
-| 并发沙箱数 | 视套餐而定 |
-
-### 应对策略
-
-```python
-import time
-from ucloud_sandbox import Sandbox, RateLimitException
-
-def create_with_retry(max_retries=3):
-    for i in range(max_retries):
-        try:
-            return Sandbox.create()
-        except RateLimitException:
-            wait_time = 2 ** i  # 指数退避
-            time.sleep(wait_time)
-    raise Exception("Max retries exceeded")
-```
-
-?> 详见：[频率限制](/agent-sandbox/docs/sdk/sandbox/12-rate-limit.md)
+?> 详见：[配额说明](/agent-sandbox/docs/sdk/sandbox/rate-limit.md)
 
 ---
 
