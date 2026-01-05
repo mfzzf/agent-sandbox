@@ -13,6 +13,7 @@
 * SDK 指南
     * [Code Interpreter](/agent-sandbox/docs/sdk/sandbox/13-code-interpreter.md)
     * [Desktop](/agent-sandbox/docs/sdk/sandbox/14-desktop.md)
+    * [Claude Code](/agent-sandbox/docs/sdk/sandbox/claude-code.md)
     * 沙箱管理
         * [生命周期](/agent-sandbox/docs/sdk/sandbox/01-lifecycle.md)
         * [列表查询](/agent-sandbox/docs/sdk/sandbox/08-list.md)
