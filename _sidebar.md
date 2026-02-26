@@ -22,6 +22,7 @@
         * [环境变量](/agent-sandbox/docs/sdk/sandbox/07-environment-variables.md)
         * [数据持久化](/agent-sandbox/docs/sdk/sandbox/04-persistence.md)
         * [网络访问](/agent-sandbox/docs/sdk/sandbox/10-internet-access.md)
+        * [连接存储桶](/agent-sandbox/docs/sdk/sandbox/11-connect-bucket.md)
         * [指标监控](/agent-sandbox/docs/sdk/sandbox/05-metrics.md)
     * 命令执行
         * [概述](/agent-sandbox/docs/sdk/commands/01-overview.md)
